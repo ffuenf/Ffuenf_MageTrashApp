@@ -16,8 +16,7 @@
  * @license    http://opensource.org/licenses/mit-license.php MIT License
  */
 
-class Ffuenf_MageTrashApp_Block_Adminhtml_System_Config_Form_Fieldset_Modules_Rewind
-    extends Mage_Adminhtml_Block_System_Config_Form_Fieldset
+class Ffuenf_MageTrashApp_Block_Adminhtml_System_Config_Form_Fieldset_Modules_Rewind extends Mage_Adminhtml_Block_System_Config_Form_Fieldset
 {
     protected $_dummyElement;
     protected $_fieldRenderer;
@@ -119,7 +118,9 @@ class Ffuenf_MageTrashApp_Block_Adminhtml_System_Config_Form_Fieldset_Modules_Re
     protected function _getFieldHtml($fieldset, $moduleName)
     {
         $e = $this->_getDummyElement();
-        $field = $fieldset->addField($moduleName . '_Rewind', 'select',
+        $field = $fieldset->addField(
+            $moduleName . '_Rewind',
+            'select',
             array(
                 'name'                  => 'groups[rewind_extns][fields][' . $moduleName . '][value]',
                 'label'                 => $moduleName,
@@ -127,8 +128,9 @@ class Ffuenf_MageTrashApp_Block_Adminhtml_System_Config_Form_Fieldset_Modules_Re
                 'values'                => $this->_getValues($moduleName),
                 'inherit'               => true,
                 'can_use_default_value' => $this->getForm()->canUseDefaultValue($e),
-                'can_use_website_value' => $this->getForm()->canUseWebsiteValue($e),
-            ))->setRenderer($this->_getFieldRenderer());
+                'can_use_website_value' => $this->getForm()->canUseWebsiteValue($e)
+            )
+        )->setRenderer($this->_getFieldRenderer());
         return $field->toHtml();
     }
 }
