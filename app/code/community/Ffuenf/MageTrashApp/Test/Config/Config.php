@@ -38,7 +38,8 @@ class Ffuenf_MageTrashApp_Test_Config_Main extends EcomDev_PHPUnit_Test_Case_Con
     public function testHelperAliases()
     {
         $this->assertHelperAlias(
-            'ffuenf_magetrashapp', 'Ffuenf_MageTrashApp_Helper_Data',
+            'ffuenf_magetrashapp',
+            'Ffuenf_MageTrashApp_Helper_Data',
             'correct helper alias'
         );
     }

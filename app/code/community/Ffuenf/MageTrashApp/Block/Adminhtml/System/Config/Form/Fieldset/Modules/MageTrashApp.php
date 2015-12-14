@@ -16,8 +16,7 @@
  * @license    http://opensource.org/licenses/mit-license.php MIT License
  */
 
-class Ffuenf_MageTrashApp_Block_Adminhtml_System_Config_Form_Fieldset_Modules_MageTrashApp
-    extends Mage_Adminhtml_Block_System_Config_Form_Fieldset
+class Ffuenf_MageTrashApp_Block_Adminhtml_System_Config_Form_Fieldset_Modules_MageTrashApp extends Mage_Adminhtml_Block_System_Config_Form_Fieldset
 {
     protected $_dummyElement;
     protected $_fieldRenderer;
@@ -90,14 +89,17 @@ class Ffuenf_MageTrashApp_Block_Adminhtml_System_Config_Form_Fieldset_Modules_Ma
     protected function _getFieldHtml($fieldset, $moduleName, $moduleStatus)
     {
         $e = $this->_getDummyElement();
-        $field = $fieldset->addField($moduleName, 'select', array(
+        $field = $fieldset->addField(
+            $moduleName,
+            'select',
+            array(
                 'name'                  => 'groups[manage_extns][fields][' . $moduleName . '][value]',
                 'label'                 => $moduleName,
                 'value'                 => (int)$moduleStatus,
                 'values'                => $this->_getValues(),
                 'inherit'               => true,
                 'can_use_default_value' => $this->getForm()->canUseDefaultValue($e),
-                'can_use_website_value' => $this->getForm()->canUseWebsiteValue($e),
+                'can_use_website_value' => $this->getForm()->canUseWebsiteValue($e)
             )
         )->setRenderer($this->_getFieldRenderer());
         return $field->toHtml();

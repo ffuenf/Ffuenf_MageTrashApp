@@ -73,7 +73,7 @@ class Ffuenf_MageTrashApp_Helper_Data extends Ffuenf_Common_Helper_Core
     }
 
     /**
-     * 
+     *
      * @param string $moduleName
      * @return boolean | array
      */
@@ -190,7 +190,8 @@ class Ffuenf_MageTrashApp_Helper_Data extends Ffuenf_Common_Helper_Core
      * @param $moduleName
      * @return mixed
      */
-    public function getResourceName($moduleName) {
+    public function getResourceName($moduleName)
+    {
         $config = Mage::app()->getConfig();
         $xmlPath = $config->getModuleDir('etc', $moduleName) . DS . 'config.xml';
         if (file_exists($xmlPath)) {

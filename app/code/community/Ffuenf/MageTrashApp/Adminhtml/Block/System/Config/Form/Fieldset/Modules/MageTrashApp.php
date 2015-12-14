@@ -89,7 +89,9 @@ class Ffuenf_MageTrashApp_Adminhtml_Block_System_Config_Form_Fieldset_Modules_Ma
     protected function _getFieldHtml($fieldset, $moduleName, $moduleStatus)
     {
         $e = $this->_getDummyElement();
-        $field = $fieldset->addField($moduleName, 'select',
+        $field = $fieldset->addField(
+            $moduleName,
+            'select',
             array(
                 'name'                  => 'groups[manage_extns][fields][' . $moduleName . '][value]',
                 'label'                 => $moduleName,
@@ -97,8 +99,9 @@ class Ffuenf_MageTrashApp_Adminhtml_Block_System_Config_Form_Fieldset_Modules_Ma
                 'values'                => $this->_getValues(),
                 'inherit'               => true,
                 'can_use_default_value' => $this->getForm()->canUseDefaultValue($e),
-                'can_use_website_value' => $this->getForm()->canUseWebsiteValue($e),
-            ))->setRenderer($this->_getFieldRenderer());
+                'can_use_website_value' => $this->getForm()->canUseWebsiteValue($e)
+            )
+        )->setRenderer($this->_getFieldRenderer());
         return $field->toHtml();
     }
 }
