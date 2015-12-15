@@ -22,7 +22,8 @@ class Ffuenf_MageTrashApp_Model_Resource_Setup extends Mage_Core_Model_Resource_
      * @param string $fileName
      * @param string $resourceName
      */
-    public function runUninstallSql($fileName, $resourceName) {
+    public function runUninstallSql($fileName, $resourceName)
+    {
         Mage::getSingleton('adminhtml/session')->addNotice('Invoking uninstall file for resource' . $resourceName);
         $connection = Mage::getSingleton('core/resource')->getConnection($resourceName);
         $connection->disallowDdlCache();
