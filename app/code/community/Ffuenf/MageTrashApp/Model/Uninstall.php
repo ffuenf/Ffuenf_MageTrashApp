@@ -91,7 +91,7 @@ class Ffuenf_MageTrashApp_Model_Uninstall extends Mage_Core_Model_Abstract
      */
     public function processUninstallPackage($moduleName)
     {
-       $this->processFileBasedUninstall($moduleName);
+        $this->processFileBasedUninstall($moduleName);
     }
 
     /**
@@ -99,7 +99,8 @@ class Ffuenf_MageTrashApp_Model_Uninstall extends Mage_Core_Model_Abstract
      *
      * @param string $moduleName
      */
-    protected function processPearUninstall($moduleName) {
+    protected function processPearUninstall($moduleName)
+    {
         $command = 'uninstall';
         $params[] = 'community';
         $params[] = $moduleName;
@@ -149,7 +150,7 @@ class Ffuenf_MageTrashApp_Model_Uninstall extends Mage_Core_Model_Abstract
             foreach ($pathsToDelete as $dest) {
                 if (file_exists($dest) && (is_file($dest) || is_link($dest))) {
                     unlink($dest);
-                } else if (file_exists($dest)) {
+                } elseif (file_exists($dest)) {
                     $helper->rrmdir($dest);
                 }
             }
