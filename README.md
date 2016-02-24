@@ -86,10 +86,10 @@ Other versions are assumed to work.
 Requirements
 ------------
 
-|                                                                     | PHP 5.3        | PHP 5.4        | PHP 5.5           | PHP 5.6       | PHP 7.0       |
-| ------------------------------------------------------------------- | -------------- | -------------- | ----------------- | ------------- | ------------- |
-| [EOL](https://secure.php.net/supported-versions.php) / STABLE / RC  | EOL            | EOL            | STABLE            | **STABLE**    | STABLE        |
-| automated tests on [travis]                                         | allow failure  | allow failure  | **required pass** | allow failure | allow failure |
+|                                                                     | PHP 5.4        | PHP 5.5           | PHP 5.6           | PHP 7.0           |
+| ------------------------------------------------------------------- | -------------- | ----------------- | ----------------- | ----------------- |
+| [EOL](https://secure.php.net/supported-versions.php) / STABLE / RC  | EOL            | STABLE            | **STABLE**        | **STABLE**        |
+| automated tests on [travis]                                         | allow failure  | **required pass** | **required pass** | **required pass** |
 
 Magento Community Edition officially supports PHP 5.4 and PHP 5.5.
 
@@ -141,7 +141,7 @@ License and Author
 ------------------
 
 - Author:: Achim Rosenhagen (<a.rosenhagen@ffuenf.de>)
-- Copyright:: 2015, ffuenf
+- Copyright:: 2016, ffuenf
 
 The MIT License (MIT)
 
