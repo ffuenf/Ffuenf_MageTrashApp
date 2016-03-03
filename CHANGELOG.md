@@ -2,9 +2,10 @@
 
 This file is used to list changes made in each version of Ffuenf_MageTrashApp.
 
-## 1.1.1 (February 24, 2016)
+## 1.1.1 (March 3, 2016)
 
 * update travis build-matrix
+* fix composer sources (https)
 * [docs] copyright notice
 
 ## 1.1.0 (December 20, 2015)
