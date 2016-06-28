@@ -33,14 +33,14 @@ class Ffuenf_MageTrashApp_Model_Observer extends Mage_Core_Model_Abstract
             $configFlag = Mage::getStoreConfig('magetrashapp/manage_extns/' . $moduleName);
             switch ($configFlag) {
                 case Ffuenf_MageTrashApp_Helper_Data::ENABLE:
-                    Mage::helper('magetrashapp')->activateModule($moduleName);
+                    Mage::helper('ffuenf_magetrashapp')->activateModule($moduleName);
                     break;
                 case Ffuenf_MageTrashApp_Helper_Data::DISABLE:
                     $this->disableModules[] = $moduleName;
-                    Mage::helper('magetrashapp')->activateModule($moduleName, false);
+                    Mage::helper('ffuenf_magetrashapp')->activateModule($moduleName, false);
                     break;
                 case Ffuenf_MageTrashApp_Helper_Data::UNINSTALL:
-                    Mage::helper('magetrashapp')->uninstallModule($moduleName);
+                    Mage::helper('ffuenf_magetrashapp')->uninstallModule($moduleName);
                     break;
                 default:
                     break;
@@ -54,10 +54,10 @@ class Ffuenf_MageTrashApp_Model_Observer extends Mage_Core_Model_Abstract
             }
             switch ($configFlag) {
                 case Ffuenf_MageTrashApp_Helper_Data::DELETE:
-                    Mage::helper('magetrashapp')->deleteCoreResource($moduleName);
+                    Mage::helper('ffuenf_magetrashapp')->deleteCoreResource($moduleName);
                     break;
                 case Ffuenf_MageTrashApp_Helper_Data::REWIND:
-                    Mage::helper('magetrashapp')->rewindCoreResource($moduleName, $version);
+                    Mage::helper('ffuenf_magetrashapp')->rewindCoreResource($moduleName, $version);
                     break;
                 default:
                     break;

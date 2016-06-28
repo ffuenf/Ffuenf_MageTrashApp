@@ -1,37 +1,35 @@
 language: php
 sudo: false
+cache:
+  apt: true
 php:
-- 5.4
 - 5.5
 - 5.6
 - 7.0
 matrix:
   fast_finish: true
   allow_failures:
-  - env: MAGENTO_VERSION=magento-ce-1.9.1.1
   - php: 5.6
-    env: MAGENTO_VERSION=magento-mirror-1.8.1.0
+    env: MAGENTO_VERSION=ce-1.8.1.0
   - php: 7.0
-    env: MAGENTO_VERSION=magento-mirror-1.8.1.0
+    env: MAGENTO_VERSION=ce-1.8.1.0
 env:
   global:
   - APPNAME=Ffuenf_MageTrashApp
   - secure: SpgjWxV1uhOPM9121TVtcYzf5FeZDDkC1qboZpjIm/fyQ4DiQQTruJ2C/wPO/tcE7FEzJRW2ubkignGzGkRYRgsWUHZXcafm/CTMeRbokNTTw8ArnmmUwJ7OQkEPkIdyFFi0HwgMI4pfvqbz0TjJkp21CmfQed+98PO+Mk50GI6etI3J7PdXwVdRF1G1+GjGhfH3MQjPYLLWNExgYGVkNgPCdO400lZf6v5HFUXEw7h9JHMkrSJ1Vvp13HgwXntHbVEDrgL94xHoVR8pxv+Y0XYMPe33iQaWRGUfsBs3qeorivpQ6M5ipvb/P2e5DCVboB+jLGL2up39PyRu0zxx5nOgZGb995qhI7tK/gdnz1NQLcYcRFyAwnW8EkHsM7cU0WS2z+oFCn89stltfiouEp5urV962p2DtqbL4wHRQyMItQ1OOR3D/uxtWTVIM1XbOzeW8V6yIiwqYrA2cPupMER3z0A939xfUK+ik9q3cUxpEYL3LNcjJPfEmUx51+0Vf6Xqz/hq6Oct8ATPix5Ag5l7CaQ/O2xkph5VNM3X6MUb3gnA3kIJUKQ9r5jZOGRK0EntoHo0G08Yx+8XAiMC8u75EcUL5HNRK7XtgQUzTyS4g4I/RqbK1PRpT/b6dhRXtN0LnXUzzcD7xiQ10dL3Ir6shMfGdMyJmqfQpqnkl9U=
   - secure: RjjrtfoZbewVTZFqumj+s7zvVRaxGlm1/jUehK7Dn9iT/9k1YhCjUesN34a60VwhuvSvqSvpsSO785ft5+OCndLj9aYTb7SMpkyT2o2n/tDOEvjIp16hqUdhdI6e7wkd+Bm3AoTx80z2/FDgUbGTWpxeNnIjaf4sQHVYDNoQJ1JJpEbLG5D1JEuzD66ofUluojmrjzUi5L8JvT84HWvwR7/hWoRLW3AzkwI6sKZEMrQO9oQfrO42H27uSNqoaHzqeUQ/0fq7euC1hX6ut064wWPgOolfsSU8MGgiXZUTJP6Iv2vdN1TVVskk7RHKC53wnZCX0goP+mjKMVZhvSTzEEzmtoz0ycJJBWejgW0nbPEXOdBYIqmTOWQfshIBibrn8p5uy6zMifl3ZAmPAjSuewOkHz317DfWnXwY4XWfgJ0jkKJnifHXcM8uEXrdEhpnIhG40yD5AGEv2m9aA9qJChvYDHlHvFgYYb8Ti5UC6TsmapEKfE+8ZrwMaRe6zZJOLNFnXWICAHzCVLFLAl7dsy5cCNxP119pFQiHzSekR1+M96U3vnoFXeVQ0HshQgcoNk3N/z5NcSwYykO7OM+vlzYVzmxujEXYrrftPBS4QAOjhDu1e06D6BiX1dHOa9Lrl/1cVp7AJPGqMTkUFW0TO8JkRrmA+X3jyrzV4GgcFhY=
   matrix:
-  - MAGENTO_VERSION=magento-ce-1.9.2.4
-  - MAGENTO_VERSION=magento-ce-1.9.1.1
-  - MAGENTO_VERSION=magento-mirror-1.8.1.0
-  - MAGENTO_VERSION=magento-mirror-1.7.0.2
-  - MAGENTO_VERSION=magento-mirror-1.6.2.0
-before_script:
-- composer self-update
-- composer install --prefer-source
-script:
-- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/master/setup.sh
+  - MAGENTO_VERSION=ce-1.9.2.4
+  - MAGENTO_VERSION=ce-1.9.1.1
+  - MAGENTO_VERSION=ce-1.8.1.0
+  - MAGENTO_VERSION=ce-1.7.0.2
+  - MAGENTO_VERSION=ce-1.6.2.0
+before_install:
+- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/master/before_install.sh
   | bash
-before_deploy:
-- gem install mime-types -v 2.6.2
+script:
+- curl -sSL https://raw.githubusercontent.com/ffuenf/MageTestStand/master/script.sh
+  | bash
 deploy:
   provider: releases
   file:

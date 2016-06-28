@@ -20,7 +20,7 @@
 <config>
     <modules>
         <Ffuenf_MageTrashApp>
-            <version>1.1.1</version>
+            <version>1.1.2</version>
         </Ffuenf_MageTrashApp>
     </modules>
     <global>

@@ -39,7 +39,7 @@ class Ffuenf_MageTrashApp_Block_Adminhtml_System_Config_Form_Fieldset_Modules_Re
             if ($moduleName === 'Mage_Adminhtml' || $moduleName === 'Ffuenf_MageTrashApp' || stripos($moduleName, 'Mage_') !== false) {
                 continue;
             }
-            $resName = Mage::helper('magetrashapp')->getResourceName($moduleName);
+            $resName = Mage::helper('ffuenf_magetrashapp')->getResourceName($moduleName);
             if ($resName === null) {
                 continue;
             }
@@ -79,7 +79,7 @@ class Ffuenf_MageTrashApp_Block_Adminhtml_System_Config_Form_Fieldset_Modules_Re
     protected function _getValues($moduleName)
     {
         $nameSpaceModule = str_replace('_', '/', $moduleName);
-        $resName = Mage::helper('magetrashapp')->getResourceName($moduleName);
+        $resName = Mage::helper('ffuenf_magetrashapp')->getResourceName($moduleName);
         $community = Mage::getBaseDir('code') . DS . 'community' . DS;
         $sqlScriptPath = $community . $nameSpaceModule . DS . 'sql' . DS . $resName . DS . '*.*';
         $valuesArray = array(

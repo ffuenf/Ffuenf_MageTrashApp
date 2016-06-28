@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of Ffuenf_MageTrashApp.
 
+## 1.1.2 (June 28, 2016)
+
+* fix extension name
+* add VersionEye dependency info
+
 ## 1.1.1 (March 3, 2016)
 
 * update travis build-matrix

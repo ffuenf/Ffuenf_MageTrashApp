@@ -180,7 +180,7 @@ class Ffuenf_MageTrashApp_Helper_Data extends Ffuenf_Common_Helper_Core
      */
     public function rewindCoreResource($moduleName, $number)
     {
-        $resName = Mage::helper('magetrashapp')->getResourceName($moduleName);
+        $resName = Mage::helper('ffuenf_magetrashapp')->getResourceName($moduleName);
         Mage::getModel('magetrashapp/coreresource')->rewindCoreResource($moduleName, $resName, $number);
     }
 
