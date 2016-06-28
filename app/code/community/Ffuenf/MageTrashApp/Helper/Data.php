@@ -12,7 +12,7 @@
  * @category   Ffuenf
  *
  * @author     Achim Rosenhagen <a.rosenhagen@ffuenf.de>
- * @copyright  Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
+ * @copyright  Copyright (c) 2016 ffuenf (http://www.ffuenf.de)
  * @license    http://opensource.org/licenses/mit-license.php MIT License
  */
 
@@ -180,7 +180,7 @@ class Ffuenf_MageTrashApp_Helper_Data extends Ffuenf_Common_Helper_Core
      */
     public function rewindCoreResource($moduleName, $number)
     {
-        $resName = Mage::helper('magetrashapp')->getResourceName($moduleName);
+        $resName = Mage::helper('ffuenf_magetrashapp')->getResourceName($moduleName);
         Mage::getModel('magetrashapp/coreresource')->rewindCoreResource($moduleName, $resName, $number);
     }
 

@@ -29,6 +29,10 @@
   },
   "repositories": [
     {
+      "type": "composer",
+      "url": "https://packages.firegento.com"
+    },
+    {
       "type": "vcs",
       "url": "https://github.com/ffuenf/Ffuenf_Common"
     }

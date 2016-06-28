@@ -12,7 +12,7 @@
  * @category   Ffuenf
  *
  * @author     Achim Rosenhagen <a.rosenhagen@ffuenf.de>
- * @copyright  Copyright (c) 2015 ffuenf (http://www.ffuenf.de)
+ * @copyright  Copyright (c) 2016 ffuenf (http://www.ffuenf.de)
  * @license    http://opensource.org/licenses/mit-license.php MIT License
  */
 
@@ -122,7 +122,7 @@ class Ffuenf_MageTrashApp_Model_Uninstall extends Mage_Core_Model_Abstract
         /* @var $configFile Mage_Core_Model_Config_Base */
         $configFile = Mage::getModel('core/config_base');
         /* @var $helper Ffuenf_MageTrashApp_Helper_Data */
-        $helper = Mage::helper('magetrashapp');
+        $helper = Mage::helper('ffuenf_magetrashapp');
         $etc = $config->getModuleDir('etc', $moduleName) . DS . 'config.xml';
         $configFile->loadFile($etc);
         $element = $configFile->getNode('uninstall');
