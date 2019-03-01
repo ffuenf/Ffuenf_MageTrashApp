@@ -2,18 +2,11 @@
 
 Ffuenf_MageTrashApp
 ===================
-[![GitHub tag](https://img.shields.io/github/tag/ffuenf/Ffuenf_MageTrashApp.svg)][tag]
-[![Build Status](https://img.shields.io/travis/ffuenf/Ffuenf_MageTrashApp.svg)][travis]
-[![VersionEye](https://www.versioneye.com/user/projects/5772adaa752cd10042008dfc/badge.svg)][versioneye]
-[![Code Quality](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_MageTrashApp/badges/quality-score.png)][code_quality]
-[![Code Coverage](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_MageTrashApp/badges/coverage.png)][code_coverage]
-[![PayPal Donate](https://img.shields.io/badge/paypal-donate-blue.svg)][paypal_donate]
-[tag]: https://github.com/ffuenf/Ffuenf_MageTrashApp
-[travis]: https://travis-ci.org/ffuenf/Ffuenf_MageTrashApp
-[versioneye]: https://www.versioneye.com/user/projects/5772adaa752cd10042008dfc
-[code_quality]: https://scrutinizer-ci.com/g/ffuenf/Ffuenf_MageTrashApp
-[code_coverage]: https://scrutinizer-ci.com/g/ffuenf/Ffuenf_MageTrashApp
-[paypal_donate]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J2PQS2WLT2Y8W&item_name=Magento%20Extension%3a%20Ffuenf_MageTrashApp&item_number=Ffuenf_MageTrashApp&currency_code=EUR
+[![GitHub tag](https://img.shields.io/github/tag/ffuenf/Ffuenf_MageTrashApp.svg)](https://github.com/ffuenf/Ffuenf_MageTrashApp)
+[![Build Status](https://img.shields.io/travis/ffuenf/Ffuenf_MageTrashApp.svg)](https://travis-ci.org/ffuenf/Ffuenf_MageTrashApp)
+[![Code Quality](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_MageTrashApp/badges/quality-score.png)](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_MageTrashApp)
+[![Code Coverage](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_MageTrashApp/badges/coverage.png)](https://scrutinizer-ci.com/g/ffuenf/Ffuenf_MageTrashApp)
+[![PayPal Donate](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J2PQS2WLT2Y8W&item_name=Magento%20Extension%3a%20Ffuenf_MageTrashApp&item_number=Ffuenf_MageTrashApp&currency_code=EUR)
 
 This is a extension for Magento Community Edition that adds a clean uninstallation routine for extensions.
 
@@ -143,7 +136,7 @@ License and Author
 ------------------
 
 - Author:: Achim Rosenhagen (<a.rosenhagen@ffuenf.de>)
-- Copyright:: 2016, ffuenf
+- Copyright:: 2019, ffuenf
 
 The MIT License (MIT)
 

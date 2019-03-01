@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of Ffuenf_MageTrashApp.
 
+## 1.2.0 (March 1, 2019)
+
+* fix composer name
+* minor updates
+
 ## 1.1.2 (June 28, 2016)
 
 * fix extension name

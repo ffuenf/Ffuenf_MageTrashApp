@@ -1,40 +1,40 @@
 {
-  "name": "Ffuenf/Ffuenf_MageTrashApp",
-  "license": "MIT",
-  "description": "This is a extension for Magento Community Edition that adds a clean uninstallation routine for extensions.",
-  "authors": [
-    {
-      "name":"Sylvain Rayé"
+    "name": "ffuenf/ffuenf_magetrashapp",
+    "license": "MIT",
+    "description": "This is a extension for Magento Community Edition that adds a clean uninstallation routine for extensions.",
+    "authors": [
+        {
+            "name":"Sylvain Rayé"
+        },
+        {
+            "name":"Tom Kadwill"
+        },
+        {
+            "name":"wsakaren"
+        },
+        {
+            "name":"Damian Luszczymak"
+        },
+        {
+            "name": "Achim Rosenhagen",
+            "email": "a.rosenhagen@ffuenf.de"
+        }
+    ],
+    "type": "magento-module",
+    "require": {
+        "ffuenf/ffuenf_common": "*"
     },
-    {
-      "name":"Tom Kadwill"
+    "require-dev": {
+        "aoepeople/composer-installers": "*"
     },
-    {
-      "name":"wsakaren"
-    },
-    {
-      "name":"Damian Luszczymak"
-    },
-    {
-      "name": "Achim Rosenhagen",
-      "email": "a.rosenhagen@ffuenf.de"
-    }
-  ],
-  "type": "magento-module",
-  "require": {
-    "Ffuenf/Ffuenf_Common": "*"
-  },
-  "require-dev": {
-    "aoepeople/composer-installers": "*"
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.firegento.com"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/ffuenf/Ffuenf_Common"
-    }
-  ]
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.firegento.com"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/ffuenf/Ffuenf_Common"
+        }
+    ]
 }
